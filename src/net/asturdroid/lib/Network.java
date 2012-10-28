@@ -18,6 +18,15 @@ import android.content.Context;
 
 public class Network {
 
+	/**
+	 * Build a JSONObject in utf-8 from a web service's url
+	 * @param context
+	 * @param url
+	 * @return
+	 * @throws ClientProtocolException
+	 * @throws IOException
+	 * @throws JSONException
+	 */
 	public static JSONObject getJSONfromURL(Context context, String url) throws ClientProtocolException, IOException, JSONException {
 
 		InputStream is = null;
@@ -30,7 +39,7 @@ public class Network {
 		HttpEntity entity = response.getEntity();
 		is = entity.getContent();
 
-		BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(is, "utf-8"), 8);
 		StringBuilder sb = new StringBuilder();
 		String line = null;
 		while ((line = reader.readLine()) != null) {
