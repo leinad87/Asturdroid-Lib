@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Asturdroid Lib</string>
+    <string name="share">Share</string>
+    
+    <!-- Errors -->
+    <string name="no_sd_found">External memory not found.</string>
+    <string name="IOException">Error, try again.</string>
+    
+    <!-- Info Dialog -->
+    <string name="about">About</string>
+    <string name="rate_app">Rate app</string>
 </resources>
